@@ -11,7 +11,7 @@ public class Menu implements Serializable
 {
 	private static final long serialVersionUID = 1433990803635169620L;
 	private String currentSubMenu;
-	
+	private String nome;
 	public String getCurrentSubMenu()
 	{
 		return currentSubMenu;
