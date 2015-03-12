@@ -17,7 +17,23 @@
 		
 			<h:form>
 				
+				<h:panelGrid columns="2" id="panelGrid">
 				
+					<p:outputLabel value="Nome:"/>
+					<p:inputText value="#{telaInstituicao.instituicao.nome}"/>
+					
+					<p:outputLabel value="Endereço"/>
+					<p:inputText value="#{telaInstituicao.instituicao.endereco}"/>
+					
+					<p:outputLabel value="Logo:"/>
+					<p:inputText value="#{telaInstituicao.instituicao.logo}"/>
+					
+					<p:outputLabel value="Email:"/>
+					<p:inputText value="#{telaInstituicao.instituicao.email}"/>
+					
+				</h:panelGrid>
+				
+				<p:commandButton value="Salvar" action="#{telaInstituicao.save()}" update="panelGrid"/>
 				
 			</h:form>
 						
