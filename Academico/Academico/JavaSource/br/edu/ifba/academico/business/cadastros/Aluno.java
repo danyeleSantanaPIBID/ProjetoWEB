@@ -3,6 +3,7 @@ package br.edu.ifba.academico.business.cadastros;
 public class Aluno
 {
 	private String nome;
+	private String endereco;
 
 	public String getNome()
 	{
