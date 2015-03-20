@@ -5,6 +5,7 @@ public class Aluno
 	private String nome;
 	private String endereco;
 	private String teste;
+	private String ola;
 
 	public String getNome()
 	{
