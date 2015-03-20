@@ -6,6 +6,7 @@ public class Aluno
 	private String endereco;
 	private String teste;
 	private String marcio;
+	private String santos;
 	private String carvalho;
 
 	public String getNome()
