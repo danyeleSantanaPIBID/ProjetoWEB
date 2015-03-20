@@ -6,10 +6,7 @@ public class Aluno
 	private String endereco;
 	private String teste;
 	private String ola;
-<<<<<<< HEAD
 	private String marcio;
-=======
->>>>>>> refs/remotes/origin/master
 	private String carvalho;
 
 	public String getNome()
