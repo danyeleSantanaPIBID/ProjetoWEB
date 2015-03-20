@@ -8,7 +8,6 @@ public class Aluno
 	private String marcio;
 	private String santos;
 	private String de;
-	private String carvalho;
 
 	public String getNome()
 	{
