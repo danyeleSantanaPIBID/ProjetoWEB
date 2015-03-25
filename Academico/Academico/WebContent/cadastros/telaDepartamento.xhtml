@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+	  
+	<h:head>
+		
+	</h:head>
+	  
+	<ui:composition template="/WEB-INF/templates/layout_menu_inicial.xhtml">
+	
+		<ui:define name="centro">
+		
+			<h:form>
+				
+				<h:panelGrid columns="2" id="panelGrid">
+				
+					<p:outputLabel value="Nome:"/>
+					<p:inputText value="#{telaDepartamento.departamento.nome}"/>
+					
+					<p:outputLabel value="Descricao"/>
+					<p:inputText value="#{telaDepartamento.departamento.descricao}"/>
+					
+					<p:outputLabel value="Telefone 1:"/>
+					<p:inputText value="#{telaDepartamento.departamento.telefone1}"/>
+					
+					<p:outputLabel value="Telafone 2:"/>
+					<p:inputText value="#{telaDepartamento.departamento.telefone2}"/>
+					
+					<p:outputLabel value="Endereco:"/>
+					<p:inputText value="#{telaDepartamento.departamento.endereco}"/>
+					
+				</h:panelGrid>
+				
+				<p:commandButton value="Salvar" action="#{telaDepartamento.save()}" update="panelGrid"/>
+				
+			</h:form>
+						
+		</ui:define>
+	</ui:composition>
+</html>
