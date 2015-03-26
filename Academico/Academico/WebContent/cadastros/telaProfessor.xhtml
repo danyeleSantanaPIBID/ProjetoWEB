@@ -22,7 +22,11 @@
 					
 						<p:outputLabel value="Nome"/>
 						<p:inputText value="#{telaProfessor.valorPesquisa}"/>
-						<p:commandButton action="#{telaProfessor.pesquisar()}" value="Pesquisar" update="dtProfessores"/>
+						
+						<p:commandButton action="#{telaProfessor.pesquisar()}" 
+										 value="Pesquisar" 
+										 update="dtProfessores"/>
+						
 						<p:commandButton action="#{telaProfessor.cadastrarProfessor()}" value="Cadastrar"/>
 					
 					</h:panelGrid>

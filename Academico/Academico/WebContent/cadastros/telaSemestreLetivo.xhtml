@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:h="http://java.sun.com/jsf/html"
+	  xmlns:f="http://java.sun.com/jsf/core"
+	  xmlns:ui="http://java.sun.com/jsf/facelets"
+	  xmlns:p="http://primefaces.org/ui">
+	  
+	<h:head>
+		
+	</h:head>
+	  
+	<ui:composition template="/WEB-INF/templates/layout_menu_inicial.xhtml">
+	
+		<ui:define name="centro">
+		
+			<h:form>
+				
+				<h:panelGrid columns="2" id="panelGrid">
+				
+					<p:outputLabel value="Semestre:"/>
+					<p:inputText value="#{telaSemestreLetivo.semestreLetivo.semestre}"/>
+					
+					<p:outputLabel value="Hora Inicio"/>
+					<p:inputText value="#{telaSemestreLetivo.semestreLetivo.horaInicio}"/>
+					
+					<p:outputLabel value="Hora Fim:"/>
+					<p:inputText value="#{telaSemestreLetivo.semestreLetivo.horaFim}"/>
+					
+					
+					
+				</h:panelGrid>
+				
+				<p:commandButton value="Salvar" action="#{telaSemestreLetivo.save()}" update="panelGrid"/>
+				
+			</h:form>
+						
+		</ui:define>
+	</ui:composition>
+</html>

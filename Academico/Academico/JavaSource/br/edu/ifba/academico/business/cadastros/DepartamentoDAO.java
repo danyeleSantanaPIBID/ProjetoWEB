@@ -2,15 +2,32 @@ package br.edu.ifba.academico.business.cadastros;
 
 import java.util.List;
 
-public class DepartamentoDAO {
 
-	public static void save(Departamento departamento)
+
+public class DepartamentoDAO {
+    
+  BDMySql bd = BDMySql.getInstance();
+	
+	
+	public  boolean save(Departamento departamento)
 	{
 		// JDBC
-		System.out.println("Departamento Salva no Banco de Dados!");
+		try {
+						
+			String sql = "INSERT INTO departamento(nome) values ('"+departamento.getNome()+ "')";
+			bd.executarSQL(sql);
+			
+			System.out.println(sql);
+			
+		} catch (Exception e) {
+			System.out.println("Erro");
+			return false;
+			
+		}
+		return true;
 	}
 	
-	public List<Departamento> getCollection()
+	public List<Instituicao> getCollection()
 	{
 		
 		return null;

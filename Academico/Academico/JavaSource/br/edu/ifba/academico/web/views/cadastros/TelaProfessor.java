@@ -14,6 +14,7 @@ import br.edu.ifba.academico.business.cadastros.ProfessorDAO;
 @ViewScoped
 public class TelaProfessor implements Serializable
 {
+	private static final long serialVersionUID = -717376418838356192L;
 	private String valorPesquisa;
 	private List<Professor> professoresPesquisados;
 

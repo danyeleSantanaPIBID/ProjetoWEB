@@ -15,11 +15,12 @@ import br.edu.ifba.academico.business.cadastros.InstituicaoDAO;
 public class TelaDepartamento implements Serializable {
 
 	private Departamento departamento;
-	
+	DepartamentoDAO depar = new DepartamentoDAO();
 	public TelaDepartamento()
 	{
 		// JDBC
-//		instituicao = InstituicaoDAO.findById();
+		//departamento = DepartamentoDAO.findById();
+		
 		
 		if(departamento == null)
 		{
@@ -36,11 +37,11 @@ public class TelaDepartamento implements Serializable {
 		this.departamento = departamento;
 	}
 	
-	public void save()
+	public  void save()
 	{
 		try 
 		{
-			DepartamentoDAO.save(departamento);
+			depar.save(departamento);
 			
 			departamento = new Departamento();
 		} 
