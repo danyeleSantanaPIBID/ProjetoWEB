@@ -1,13 +1,25 @@
-package br.edu.ifba.academico.business.cadastros;
-
-import java.util.List;
+import br.edu.ifba.academico.business.cadastros.BDMySql;
+import br.edu.ifba.academico.business.cadastros.Instituicao;
 
 public class InstituicaoDAO 
 {
-	public static void save(Instituicao instituicao)
+	
+	  BDMySql bd = BDMySql.getInstance();
+	  
+	public boolean save(Instituicao instituicao)
 	{
 		// JDBC
-		System.out.println("Instituição Salva no Banco de Dados!");
+		try {
+			
+			String sql = "INSERT INTO institui�ao(nome) values ('"+instituicao.getNome()+ "')";
+			bd.executarSQL(sql);
+			
+			System.out.println(sql);
+			
+		} catch (Exception e) {
+			System.out.println("Erro");
+			return false;
+			
 	}
 	
 	public List<Instituicao> getCollection()

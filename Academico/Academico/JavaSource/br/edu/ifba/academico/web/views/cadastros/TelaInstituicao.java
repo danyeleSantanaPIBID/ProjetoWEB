@@ -13,6 +13,7 @@ import br.edu.ifba.academico.business.cadastros.InstituicaoDAO;
 public class TelaInstituicao implements Serializable 
 {
 	private Instituicao instituicao;
+	InstituicaoDAO instuicaoDAO = new InstituicaoDAO();
 	
 	public TelaInstituicao()
 	{
@@ -39,7 +40,7 @@ public class TelaInstituicao implements Serializable
 	{
 		try 
 		{
-			InstituicaoDAO.save(instituicao);
+			instituicaoDAO.save(instituicao);
 			
 			instituicao = new Instituicao();
 		} 
