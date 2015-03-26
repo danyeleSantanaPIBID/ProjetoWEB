@@ -7,6 +7,7 @@ public class Aluno
 	private String teste2;
 	private String teste1;
 	private String marcio;
+	private String joao;
 
 	public String getNome()
 	{
