@@ -4,7 +4,7 @@ public class Aluno
 {
 	private String nome;
 	private String endereco;
-	private String testeLocal;
+	private String teste2;
 
 	public String getNome()
 	{
